@@ -5,7 +5,9 @@
 *.db
 
 # Ignore database documentation and schema markdown files
-README_*.md
+README_DB_All_INFO.md
+README_DB_All_SQL.md
+README_SIM.md
 
 # Ignore environment files
 .env
