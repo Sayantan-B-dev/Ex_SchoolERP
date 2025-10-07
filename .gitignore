@@ -1,0 +1,79 @@
+# Ignore database dumps and generated SQL
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore Python cache and virtualenvs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+ENV/
+
+# Ignore node modules (if any frontend)
+node_modules/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/project files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore backup files
+*~
+*.swp
+*.bak
+
+# Ignore log files
+*.log
+
+# Ignore migration artifacts
+migrations/
+alembic/
+
+# Ignore test output
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# Ignore compiled binaries
+*.so
+*.dll
+*.exe
+*.out
+
+# Ignore PHP specific files and folders
+/vendor/
+composer.lock
+composer.phar
+*.phar
+*.phpunit.result.cache
+.phpunit.cache/
+# Laravel & common PHP frameworks
+bootstrap/cache/
+storage/
+.env.testing
+.env.example
+# Symfony
+var/
+/config/jwt/
+# PHPUnit
+phpunit.xml
+phpunit.xml.dist
+# Ignore IDE helpers
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php

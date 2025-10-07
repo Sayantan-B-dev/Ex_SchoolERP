@@ -1,0 +1,39 @@
+.placeholder-box {
+  height: 200px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #d6d6d6,
+    #d6d6d6 10px,
+    #cfcfcf 10px,
+    #cfcfcf 20px
+  );
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.placeholder-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation fade-ins */
+@keyframes fadeInBg {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero-100vh .container {
+  animation: fadeInBg 0.5s ease-in-out;
+}
+
+.row .placeholder-box {
+  animation-delay: calc(var(--delay, 0s));
+}
+
+.row .col-md-4:nth-child(1) .placeholder-box { --delay: 0.25s; }
+.row .col-md-4:nth-child(2) .placeholder-box { --delay: 0.5s; }
+.row .col-md-4:nth-child(3) .placeholder-box { --delay: 0.75s; }
+.row .col-md-4:nth-child(4) .placeholder-box { --delay: 1s; }
+.row .col-md-4:nth-child(5) .placeholder-box { --delay: 1.25s; }
+.row .col-md-4:nth-child(6) .placeholder-box { --delay: 1.5s; }
