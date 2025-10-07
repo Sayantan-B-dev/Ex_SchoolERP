@@ -39,3 +39,6 @@ Student ERP (SIM) is a lightweight web application for managing student registra
 - `auth/logout.php` — Handles user logout
 - `home.php` — User dashboard
 - `profile.php`, `auth/profile_update.php` — Profile viewing and updating
+
+# DB info here
+> https://drive.google.com/drive/folders/1whSdqdNkXK_EthV2dw_9zjVJzFOdGzy1?usp=sharing
