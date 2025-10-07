@@ -42,3 +42,26 @@ Student ERP (SIM) is a lightweight web application for managing student registra
 
 # DB info here
 > https://drive.google.com/drive/folders/1whSdqdNkXK_EthV2dw_9zjVJzFOdGzy1?usp=sharing
+
+## Make sure to run this in your MySQL server from XAMPP
+```sql
+CREATE DATABASE IF NOT EXISTS student_erp_auth CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE student_erp_auth;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  reg_no VARCHAR(50) NULL,
+  college_id VARCHAR(50) NULL,
+  gender ENUM('Male','Female') NOT NULL,
+  course ENUM(
+    'BCA', 'BSc CS', 'Diploma CS', 'MBA', 'BBA', 'HR', 'Finance', 'Marketing',
+    'Diploma Civil', 'Diploma Mechanical', 'Diploma Electrical', 'LLB', 'BA LLB'
+  ) NOT NULL,
+  subjects TEXT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
