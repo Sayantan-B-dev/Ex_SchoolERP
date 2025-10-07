@@ -4,6 +4,9 @@
 *.sqlite3
 *.db
 
+# Ignore database documentation and schema markdown files
+README_*.md
+
 # Ignore environment files
 .env
 .env.*
